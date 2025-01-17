@@ -54,14 +54,11 @@ for i in range(int(movies_num)):
 
         # Tries to convert the budget to a float, verifying that it is a number.
         try:
-            float(new_budget)
-            budgets.append(new_budget)
-            if new_budget >= 0:
+            new_budget = float(new_budget)
+            if new_budget > 0:
+                budgets.append(new_budget)
                 budget_validation = True
-
-            else:
-                print("Please enter a positive number.")
-                continue
+            
 
         # Prints an error message if the budget is not numeric, prompts the user again
         except:
