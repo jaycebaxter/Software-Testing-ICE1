@@ -15,6 +15,8 @@ user_exit = False
 # Initializing my lists
 movies = []
 budgets = []
+above_average_title = []
+above_average_budget = []
 
 # Turning this into a function so I don't have to type it twice
 def add_movies():
@@ -79,8 +81,19 @@ while True:
     if menu_option == "1":
         # budgets = list(map(int, budgets))
         average = sum(budgets) / int(movies_num)
-        print(f"The average of all movie budgets is {round(average,2)}.")
-        
+        print(f"\nThe average of all movie budgets is {round(average,2)}.")
+
+        for i in range(int(movies_num)):
+            if budgets[i] > average:
+                above_average_title.append(movies[i])
+                above_average_budget.append(budgets[i])
+
+        print("The following movies had an above average budget: ")
+        for i in range(len(above_average_title)):
+            print(f"{above_average_title[i]}: ${above_average_budget[i]} Above average by {round(above_average_budget[i] - average, 2)}")
+
+        print(f"There were {len(above_average_title)} movies above average budget.")
+
 
     elif menu_option == "2":
         add_movies()
