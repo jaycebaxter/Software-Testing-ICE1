@@ -79,21 +79,28 @@ while True:
     menu_option = input("\nPress 1 to calculate, 2 to add more movies, or 3 to exit --> ")
 
     if menu_option == "1":
-        # budgets = list(map(int, budgets))
-        average = sum(budgets) / int(movies_num)
+        total_movies = len(movies)
+        average = sum(budgets) / total_movies
         print(f"\nThe average of all movie budgets is {round(average,2)}.")
 
-        for i in range(int(movies_num)):
+        for i in range(total_movies):
             if budgets[i] > average:
                 above_average_title.append(movies[i])
                 above_average_budget.append(budgets[i])
 
-        print("The following movies had an above average budget: ")
+        print("The following movies had an above average budget: \n")
         for i in range(len(above_average_title)):
-            print(f"{above_average_title[i]}: ${above_average_budget[i]} Above average by {round(above_average_budget[i] - average, 2)}")
+            print(f"{above_average_title[i]}: ${above_average_budget[i]} Above average by ${round(above_average_budget[i] - average, 2)}")
 
-        print(f"There were {len(above_average_title)} movies above average budget.")
+        print(f"\nThere were {len(above_average_title)} movies above average budget.")
 
+        movies.sort()
+        budgets.sort()
+
+        # for i in range(total_movies):
+        #     print
+
+                
 
     elif menu_option == "2":
         add_movies()
