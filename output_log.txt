@@ -1,25 +1,15 @@
-Number of movies: 5
-Name of movie: dark knight
-Movie's budget: 100
-Name of movie: joker
+Number of movies: 2
+Name of movie: test1
 Movie's budget: 300
-Name of movie: cinderella
+Name of movie: test2
 Movie's budget: 500
-Name of movie: naruto
-Movie's budget: 200
-Name of movie: titanic
-Movie's budget: 750
 Menu option: 1
-Average budget: 370.0
+Average budget: 400.0
 Above average movies:
-- cinderella: $500.0 - Above average by $130.0
-- titanic: $750.0 - Above average by $380.0
-Movies with above average budget: 2
+- test2: $500.0 - Above average by $100.0
+Movies with above average budget: 1
 Budgets from lowest to highest:
-$ 100.0
-$ 200.0
 $ 300.0
 $ 500.0
-$ 750.0
 Menu option: 3
 Exiting program

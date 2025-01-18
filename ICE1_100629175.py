@@ -15,6 +15,8 @@ user_exit = False
 file_exists = False
 
 # Tries to create output_log.txt unless one exists
+# I've never actually created a file before so if this doesn't work please have mercy and create one
+# manually or everything will fail
 while file_exists == False:
     try:
         open("output_log.txt", "x")
@@ -144,5 +146,3 @@ while True:
         print("Exiting program")
         output_log.write("Exiting program\n")
         exit()
-
-
