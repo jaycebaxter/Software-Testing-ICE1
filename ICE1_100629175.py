@@ -81,24 +81,25 @@ while True:
     if menu_option == "1":
         total_movies = len(movies)
         average = sum(budgets) / total_movies
-        print(f"\nThe average of all movie budgets is {round(average,2)}.")
+        print(f"\nThe average of all movie budgets is ${round(average,2)}.")
 
         for i in range(total_movies):
             if budgets[i] > average:
                 above_average_title.append(movies[i])
                 above_average_budget.append(budgets[i])
 
-        print("The following movies had an above average budget: \n")
+        print("\nThe following movies had an above average budget:")
         for i in range(len(above_average_title)):
-            print(f"{above_average_title[i]}: ${above_average_budget[i]} Above average by ${round(above_average_budget[i] - average, 2)}")
+            print(f"- {above_average_title[i]}: ${above_average_budget[i]} - Above average by ${round(above_average_budget[i] - average, 2)}")
 
         print(f"\nThere were {len(above_average_title)} movies above average budget.")
 
-        movies.sort()
         budgets.sort()
+        print(f"\nBudgets from highest to lowest:")
+        for i in range(total_movies):
+            print(f"$ {budgets[i]}")
 
-        # for i in range(total_movies):
-        #     print
+
 
                 
 
